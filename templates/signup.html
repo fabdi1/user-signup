@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+  {% block content %}
+
+  <h1>{{title}}</h1>
+  <form action="/add-user" method='POST'>
+    <p>
+    <label for="name">Name:
+      <br>
+      <input type="text" id="name" name="username" value="{{username}}">
+    </label> <span class="uerror">{{uname_error}}</span>
+    </p>
+    <p>
+    <label for="password">Password:
+      <br>
+      <input type="password" id="password" name="password">
+    </label> <span class="perror">{{pwd_error}}</span>
+    </p>
+    <p>
+    <label for="vpwd">Verify Password:
+      <br>
+      <input type="password" id="vpwd" name="vpwd">
+    </label><span class="vperror">{{vpwd_error}}</span>
+    </p>
+    <h3>{{match_error}}</h3>
+    <p>
+    <label for="email">Email:
+      <br>
+      <input type="email" id="email" name="email" value={{email}}>
+    </label><span class="email_error">{{email_error}}</span>
+    </p>
+    <button type="submit">Complete Sign Up</button>
+  </form>
+  {% endblock %}
