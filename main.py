@@ -71,7 +71,7 @@ def add_user():
 
     if email != "":
         email_error=validate_input(email)
-        email_error+=check_email_format(email)
+        email_error+=check_email(email)
     else:
         email_error=""
     
